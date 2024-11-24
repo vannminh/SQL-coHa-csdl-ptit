@@ -1,0 +1,5 @@
+
+SELECT username, fname, lname, started_on
+FROM Instructor
+WHERE started_on < '1990-01-01'
+ORDER BY started_on ASC;
