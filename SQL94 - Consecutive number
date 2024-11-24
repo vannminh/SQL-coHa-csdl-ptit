@@ -1,0 +1,11 @@
+SELECT DISTINCT num AS ConsecutiveNums
+FROM (
+    SELECT 
+        num, 
+        LEAD(num) OVER (ORDER BY id) AS next_num,
+        LEAD(num, 2) OVER (ORDER BY id) AS next_num2
+    FROM Logs
+) temp
+WHERE num = next_num AND num = next_num2;
+
+
