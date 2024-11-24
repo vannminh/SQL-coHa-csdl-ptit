@@ -1,0 +1,3 @@
+SELECT c.dept, c.number, c.title
+FROM Class c
+WHERE LOWER(c.title) LIKE LOWER('%introduction%');
