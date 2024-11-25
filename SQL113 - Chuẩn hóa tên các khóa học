@@ -1,0 +1,8 @@
+SELECT 
+    c.dept, 
+    c.number, 
+    LEFT(c.title, 12) AS short_title
+FROM 
+    Class c
+ORDER BY 
+    c.dept, c.number;
