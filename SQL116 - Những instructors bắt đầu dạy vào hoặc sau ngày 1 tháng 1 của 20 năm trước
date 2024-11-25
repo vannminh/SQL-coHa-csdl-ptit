@@ -1,0 +1,11 @@
+SELECT 
+    username, 
+    fname, 
+    lname, 
+    started_on
+FROM 
+    Instructor
+WHERE 
+    started_on >= DATE_SUB(CURDATE(), INTERVAL 20 YEAR)
+ORDER BY 
+    started_on;
